@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-listen", "stfu-listener\stfu-listen.csproj", "{665A0998-837E-49A0-98EA-FADF5A4C0DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-shout", "stfu-shout\stfu-shout.csproj", "{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{665A0998-837E-49A0-98EA-FADF5A4C0DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665A0998-837E-49A0-98EA-FADF5A4C0DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665A0998-837E-49A0-98EA-FADF5A4C0DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665A0998-837E-49A0-98EA-FADF5A4C0DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
