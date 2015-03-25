@@ -30,20 +30,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VirtualBox.Interop;
 
 namespace stfu_tray
 {
     public partial class frmTest : Form
     {
+
         public frmTest()
         {
             InitializeComponent();
+            bool lSuccess = false;
+            try
+            {
+                lSuccess = true;
+            } catch (Exception e)
+            {
+                
+            }
+            finally
+            {
+                if (!lSuccess) Application.Exit();
+            }
         }
 
         private void btnPush_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

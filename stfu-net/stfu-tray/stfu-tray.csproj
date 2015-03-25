@@ -42,10 +42,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VirtualBox.Interop">
-      <HintPath>..\..\common\vbox-sdk\bindings\mscom\lib\VirtualBox.Interop.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmTest.cs">
