@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-listen", "stfu-listene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-shout", "stfu-shout\stfu-shout.csproj", "{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-tray", "stfu-tray\stfu-tray.csproj", "{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
