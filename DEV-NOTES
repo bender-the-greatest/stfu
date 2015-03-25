@@ -1,0 +1,13 @@
+When the VirtualBox SDK is updated, you will need to run the following commands when building stfu.sln on Windows:
+
+     tblimp.exe ["path to VirtualBox.tlb"] /out:VirtualBox.Interop.dll
+     ildasm.exe VirtualBox.Interop.dll /out:VirtualBox.Interop.il
+     del VirtualBox.Interop.dll
+
+Now edit VirtualBox.Interop.il and replace all instances of "marshal ( safearray unsigned int8 )" with "marshal ( safearray int8 )". You may need to play with the spacing to find all of the instances.
+
+And then finally, regenerate the DLL from the modified IL
+
+    ilasm.exe /DLL VirtualBox.Interop.dll
+
+If everything went well we should have a .NET usable COM interface to the VirtualBox COM API :) 
