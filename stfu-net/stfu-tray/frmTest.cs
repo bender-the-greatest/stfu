@@ -30,32 +30,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace stfu_tray
 {
     public partial class frmTest : Form
     {
+        private ProcessStartInfo mVboxInfo;
+        private readonly string mGuestPropertyArg = "guestproperty set alextest "; // note the trailing space
 
         public frmTest()
         {
             InitializeComponent();
-            bool lSuccess = false;
-            try
-            {
-                lSuccess = true;
-            } catch (Exception e)
-            {
-                
-            }
-            finally
-            {
-                if (!lSuccess) Application.Exit();
-            }
+        
+            // Check if VBoxControl.exe exists
+            string path = null;
+            if (!(System.IO.File.Exists(path = string.Format("{0}\\VBoxControl.exe", System.Environment.GetFolderPath(Environment.SpecialFolder.System)))))
+                throw new System.IO.IOException("VBoxControl.exe not found. Make sure this is a VirtualBox guest and that you have Guest Additions installed.");
+
+            // Create the process info
+            this.mVboxInfo = new ProcessStartInfo(path, this.mGuestPropertyArg);
         }
 
         private void btnPush_Click(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(this.txtProp.Text))
+            {
+                MessageBox.Show("You need to enter a string into the box (no whitespace).");
+                return;
+            }
+
+            mVboxInfo.Arguments += string.Format("\"{0}\"", this.txtProp.Text);
+            Process p = Process.Start(mVboxInfo);
+
+            // change mVBox info arguments back to the default
+            mVboxInfo.Arguments = this.mGuestPropertyArg;
         }
     }
 }

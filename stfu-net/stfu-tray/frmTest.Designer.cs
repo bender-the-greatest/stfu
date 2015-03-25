@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProp = new System.Windows.Forms.TextBox();
             this.lblProperty = new System.Windows.Forms.Label();
             this.btnPush = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtProp
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtProp.Location = new System.Drawing.Point(13, 32);
+            this.txtProp.Name = "txtProp";
+            this.txtProp.Size = new System.Drawing.Size(169, 20);
+            this.txtProp.TabIndex = 0;
             // 
             // lblProperty
             // 
@@ -66,7 +66,7 @@
             this.ClientSize = new System.Drawing.Size(201, 102);
             this.Controls.Add(this.btnPush);
             this.Controls.Add(this.lblProperty);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProp);
             this.MaximumSize = new System.Drawing.Size(217, 140);
             this.MinimumSize = new System.Drawing.Size(217, 140);
             this.Name = "frmTest";
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProp;
         private System.Windows.Forms.Label lblProperty;
         private System.Windows.Forms.Button btnPush;
     }
