@@ -50,6 +50,10 @@ namespace stfu_tray
 
             // Create the process info
             this.mVboxInfo = new ProcessStartInfo(path, this.mGuestPropertyArg);
+            this.mVboxInfo.CreateNoWindow = true;
+            this.mVboxInfo.LoadUserProfile = false;
+            this.mVboxInfo.UseShellExecute = true;
+
         }
 
         private void btnPush_Click(object sender, EventArgs e)

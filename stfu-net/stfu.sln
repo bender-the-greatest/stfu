@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-listen", "stfu-listene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-shout", "stfu-shout\stfu-shout.csproj", "{EC38A60B-FB73-401E-9BE0-27799F2DF9A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-tray", "stfu-tray\stfu-tray.csproj", "{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{958C6A26-6B1B-4797-AC31-9BB6ED0CE33F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stfu-test", "stfu-test\stfu-test.csproj", "{D115FE49-B2E2-42C6-B970-4FFE69F2FAB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
