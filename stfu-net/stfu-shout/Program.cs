@@ -24,7 +24,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,16 +32,12 @@ namespace stfu_shout
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// The main entry point for the application
         /// </summary>
+        [STAThread]
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[] 
-            { 
-                new StfuShout() 
-            };
-            ServiceBase.Run(ServicesToRun);
+            StfuShout s = new StfuShout();
         }
     }
 }
