@@ -32,6 +32,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
+using stfu_shared;
+
 namespace stfu_tray
 {
     public partial class frmTest : Form
@@ -69,6 +71,12 @@ namespace stfu_tray
 
             // change mVBox info arguments back to the default
             mVboxInfo.Arguments = this.mGuestPropertyArg;
+        }
+
+        private void btnLogWindow_Click(object sender, EventArgs e)
+        {
+            using (frmError fErr = new frmError())
+                fErr.ShowDialog();
         }
     }
 }

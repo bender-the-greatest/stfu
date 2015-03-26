@@ -37,7 +37,14 @@ namespace stfu_shout
         [STAThread]
         static void Main()
         {
-            StfuShout s = new StfuShout();
+            try
+            {
+                StfuShout s = new StfuShout();
+                s.Run();
+            } catch (Exception e)
+            {
+
+            }
         }
     }
 }

@@ -31,6 +31,7 @@
             this.txtProp = new System.Windows.Forms.TextBox();
             this.lblProperty = new System.Windows.Forms.Label();
             this.btnPush = new System.Windows.Forms.Button();
+            this.btnLogWindow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtProp
@@ -59,15 +60,25 @@
             this.btnPush.UseVisualStyleBackColor = true;
             this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
             // 
+            // btnLogWindow
+            // 
+            this.btnLogWindow.Location = new System.Drawing.Point(12, 96);
+            this.btnLogWindow.Name = "btnLogWindow";
+            this.btnLogWindow.Size = new System.Drawing.Size(75, 23);
+            this.btnLogWindow.TabIndex = 3;
+            this.btnLogWindow.Text = "Error Window";
+            this.btnLogWindow.UseVisualStyleBackColor = true;
+            this.btnLogWindow.Click += new System.EventHandler(this.btnLogWindow_Click);
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 102);
+            this.ClientSize = new System.Drawing.Size(201, 260);
+            this.Controls.Add(this.btnLogWindow);
             this.Controls.Add(this.btnPush);
             this.Controls.Add(this.lblProperty);
             this.Controls.Add(this.txtProp);
-            this.MaximumSize = new System.Drawing.Size(217, 140);
             this.MinimumSize = new System.Drawing.Size(217, 140);
             this.Name = "frmTest";
             this.Text = "Test Property";
@@ -81,6 +92,7 @@
         private System.Windows.Forms.TextBox txtProp;
         private System.Windows.Forms.Label lblProperty;
         private System.Windows.Forms.Button btnPush;
+        private System.Windows.Forms.Button btnLogWindow;
     }
 }
 
