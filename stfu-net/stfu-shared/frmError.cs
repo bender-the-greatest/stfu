@@ -15,18 +15,29 @@ namespace stfu_shared
         private const short ORIG_HEIGHT = 115;
         private const short BIG_HEIGHT = 350;
 
+        private StfuException mException;
+
+        /// <summary>
+        /// Default constructor, used only for testing. frmError(StfuException) should be used instead.
+        /// </summary>
         public frmError()
+            : this(new StfuException(new Exception("This is just a test exception.")))
+        { }
+
+        public frmError(StfuException e)
         {
+            if (e == null) throw new ArgumentNullException("Exception cannot be null.");
             InitializeComponent();
+            this.mException = e;
+            this.txtMessage.Text = e.Message;
+            this.txtTrace.Text = e.StackTrace;
         }
 
         private void btnShowLog_Click(object sender, EventArgs e)
         {
-            // 
-
-            // resize the window accordingly
-            int lHeight = (this.Height == BIG_HEIGHT) ? ORIG_HEIGHT : BIG_HEIGHT;
-            this.MaximumSize = new Size(this.Width, lHeight);
+            // Resize the window and make the trace box visible or invisible
+            int lHeight = (this.txtTrace.Visible = !(this.Height == BIG_HEIGHT)) ? BIG_HEIGHT : ORIG_HEIGHT;
+            this.MaximumSize = this.MinimumSize = new Size(this.Width, lHeight);
             this.Height = lHeight;
         }
     }

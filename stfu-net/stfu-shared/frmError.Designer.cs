@@ -31,10 +31,13 @@
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnShowLog = new System.Windows.Forms.Button();
+            this.txtTrace = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblMessage
             // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessage.AutoSize = true;
             this.lblMessage.Location = new System.Drawing.Point(9, 9);
             this.lblMessage.Name = "lblMessage";
@@ -44,6 +47,8 @@
             // 
             // txtMessage
             // 
+            this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMessage.Location = new System.Drawing.Point(12, 26);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ReadOnly = true;
@@ -52,6 +57,8 @@
             // 
             // btnShowLog
             // 
+            this.btnShowLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowLog.Location = new System.Drawing.Point(141, 52);
             this.btnShowLog.Name = "btnShowLog";
             this.btnShowLog.Size = new System.Drawing.Size(112, 23);
@@ -59,6 +66,18 @@
             this.btnShowLog.Text = "Show Stack Trace";
             this.btnShowLog.UseVisualStyleBackColor = true;
             this.btnShowLog.Click += new System.EventHandler(this.btnShowLog_Click);
+            // 
+            // txtTrace
+            // 
+            this.txtTrace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTrace.Location = new System.Drawing.Point(12, -151);
+            this.txtTrace.Multiline = true;
+            this.txtTrace.Name = "txtTrace";
+            this.txtTrace.ReadOnly = true;
+            this.txtTrace.Size = new System.Drawing.Size(370, 216);
+            this.txtTrace.TabIndex = 3;
+            this.txtTrace.Visible = false;
             // 
             // frmError
             // 
@@ -68,7 +87,9 @@
             this.Controls.Add(this.btnShowLog);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.txtTrace);
             this.MaximumSize = new System.Drawing.Size(410, 115);
+            this.MinimumSize = new System.Drawing.Size(410, 115);
             this.Name = "frmError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Show the Friggin\' Updates - An Error Occurred";
@@ -82,5 +103,6 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnShowLog;
+        private System.Windows.Forms.TextBox txtTrace;
     }
 }
