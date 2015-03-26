@@ -27,6 +27,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using stfu_shared;
+
 namespace stfu_shout
 {
     static class Program
@@ -43,7 +45,7 @@ namespace stfu_shout
                 s.Run();
             } catch (Exception e)
             {
-
+                StfuLogger.ShowException(e, "Fatal error has occurred, restart stfu-shout.");
             }
         }
     }

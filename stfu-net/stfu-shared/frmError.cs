@@ -25,11 +25,15 @@ namespace stfu_shared
         { }
 
         public frmError(StfuException e)
+            :this(e, string.Empty)
+        { }
+
+        public frmError(StfuException e, string prefix)
         {
             if (e == null) throw new ArgumentNullException("Exception cannot be null.");
             InitializeComponent();
             this.mException = e;
-            this.txtMessage.Text = e.Message;
+            this.txtMessage.Text = string.Format("{0}: {1}", (string.IsNullOrWhiteSpace(prefix)) ? string.Empty : prefix, e.Message);
             this.txtTrace.Text = e.StackTrace;
         }
 

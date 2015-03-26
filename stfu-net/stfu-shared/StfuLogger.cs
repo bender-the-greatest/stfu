@@ -27,7 +27,26 @@ namespace stfu_shared
                 time.ToShortTimeString());
         }
 
-        //public static void ShowException()
+        public static void ShowException(Exception e)
+        {
+            ShowException(e, string.Empty);
+        }
+
+        public static void ShowException(Exception e, string prefix)
+        {
+            ShowException(new StfuException(e), prefix);
+        }
+
+        public static void ShowException(StfuException e)
+        {
+            ShowException(e, string.Empty);
+        }
+
+        public static void ShowException(StfuException e, string prefix)
+        {
+            using (frmError fErr = new frmError(e, prefix))
+                fErr.ShowDialog();
+        }
 
         public StfuLogger(string logname)
         {
