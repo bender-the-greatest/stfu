@@ -38,6 +38,10 @@ namespace stfu_tray
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr SetWindowsHookEx(HookType hookType, HookProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool UnhookWindowsHookEx(IntPtr hhk);
         #endregion
 
         public frmGetTaskFlash()
