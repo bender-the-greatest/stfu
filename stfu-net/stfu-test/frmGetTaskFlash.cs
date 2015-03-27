@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 using System.Runtime.InteropServices;
 
@@ -52,6 +53,19 @@ namespace stfu_tray
         private void btnListen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private List<IntPtr> GetTaskbarHWNDs()
+        {
+            List<IntPtr> hwnds = new List<IntPtr>();
+            foreach (Process p in Process.GetProcesses())
+            {
+                // This is dirty, assumes if there is no window title
+                // then it is not a taskbar process
+                if (!string.IsNullOrEmpty(p.MainWindowTitle))
+                    hwnds.Add(p.MainWindowHandle);
+            }
+            return hwnds;
         }
     }
 }
