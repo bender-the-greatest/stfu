@@ -144,6 +144,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGetTaskFlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetTaskFlash.Designer.cs">
+      <DependentUpon>frmGetTaskFlash.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGetTaskFlash.resx">
+      <DependentUpon>frmGetTaskFlash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
