@@ -43,7 +43,15 @@ namespace stfu_tray
         [DllImport("user32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+        [DllImport("user32.dll")]
+        static extern uint GetWindowThreadProcessId(IntPtr hWnd, IntPtr ProcessId);
         #endregion
+
+        private bool mTestFlash = false;
 
         public frmGetTaskFlash()
         {
@@ -52,20 +60,29 @@ namespace stfu_tray
 
         private void btnListen_Click(object sender, EventArgs e)
         {
-
+            // Toggle checking for flashing taskbar buttons
+            switch (mTestFlash = !mTestFlash)
+            {
+                case true:
+                    uint dwID
+                    break;
+                case false:
+                    break;
+            }
+            
         }
 
-        private List<IntPtr> GetTaskbarHWNDs()
+        private static List<IntPtr> GetTaskbarHWNDs()
         {
-            List<IntPtr> hwnds = new List<IntPtr>();
-            foreach (Process p in Process.GetProcesses())
-            {
-                // This is dirty, assumes if there is no window title
-                // then it is not a taskbar process
-                if (!string.IsNullOrEmpty(p.MainWindowTitle))
-                    hwnds.Add(p.MainWindowHandle);
-            }
-            return hwnds;
+            //List<IntPtr> hwnds = new List<IntPtr>();
+            //foreach (Process p in Process.GetProcesses())
+            //{
+            //    // This is dirty, assumes if there is no window title
+            //    // then it is not a taskbar process
+            //    if (!string.IsNullOrEmpty(p.MainWindowTitle))
+            //        hwnds.Add(p.MainWindowHandle);
+            //}
+            //return hwnds;
         }
     }
 }
