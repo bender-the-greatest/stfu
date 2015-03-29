@@ -24,29 +24,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-using stfu_shared;
-
-namespace stfu_shout
+namespace stfu_tray
 {
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            try
-            {
-                StfuShout s = new StfuShout();
-                s.Run();
-            } catch (Exception e)
-            {
-                StfuLogger.ShowException(e, "Fatal error has occurred, restart stfu-shout.");
-            }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmTest());
         }
     }
 }
